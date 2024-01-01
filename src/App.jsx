@@ -61,7 +61,7 @@ export const App = () => {
         <>
             <div className='row'>
                 <div className='col-7'>
-                    <h2>Todo app <span className="badge rounded-pill text-bg-secondary">10/10</span></h2>
+                    <h2>Todo app <span className="badge rounded-pill text-bg-secondary">{ todos.filter(todo => todo.done === true).length }/{ todos.length }</span></h2>
                     <hr />
                     <ul className='list-group p-1'>
                         <TodoItem todos={ todos } onRemoveTodo={ handleRemoveTodo} onToggleTodo={ onToggleTodo } />
